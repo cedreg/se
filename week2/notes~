@@ -1,0 +1,18 @@
+protokoll 21.08.2017
+cedric regenass
+
+
+- java classen muessen in pakete strukturiert werden
+- java classen muessen gleich heissen wie das file CASE-SENSITIVE
+- fils muessen in dem verzeichnis liegen, damit der paket name uebereinstimmt
+    - z.B packege ch.hf.math -> ordnerstruktur ch/hf/math/XYZ.java
+- javac = java Compiler
+- javap = java Package...
+- javac -classpath "ch.hf.math" -> setzt einen temporaeren classenpfad fuer den compiler
+- beim ausfuehren wird nicht ein filname ausgefuehrt sondern die classe (ohne .class)
+- classpath gibt an, in welchen verzeichnissen gesucht wird, um zu compiliern oder auszufuehren
+    - java -calsspath statistics:statistic2 ch.hf.math.StatisticsTest
+
+
+
+- find . -name '*.class' -delete

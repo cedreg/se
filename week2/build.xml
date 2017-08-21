@@ -1,0 +1,15 @@
+<project name="Statistics" default="compile">
+  <property name="bindir" value="bin"/>
+
+  <target name="init">
+    <mkdir dir="${bindir}"/>
+  </target>
+
+  <target name="compile" depends="init">
+    <javac srcdir="src" destdir="${bindir}" includeantruntime="True" />
+  </target>
+
+  <target name="archive" depends="init, compile">
+    <jar destfile="app.jar" manifest="resources/manifest.mf" basedir="${bindir}" />
+  </target>
+</project>
