@@ -1,0 +1,7 @@
+protokoll 28.08.2017
+Cedric Regenass
+
+
+- Ant == make aber ein bisschen mehr auf java ausgerichtet
+- Ant uses build.xml (xml config files) und ist caseSensitive
+- 

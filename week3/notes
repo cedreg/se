@@ -1,0 +1,10 @@
+protokoll 28.08.2017
+Cedric Regenass
+
+
+- Ant == make aber ein bisschen mehr auf java ausgerichtet
+- Ant uses build.xml (xml config files) und ist caseSensitive
+- Eclipse hat viele Plugins, kann zu probs werden, da die sich gegenseitig stören
+- googleStyle für code format + KEINE TABS
+
+- exeption sind von baseClass throwable abgeleitet
