@@ -4,7 +4,7 @@ public class StatisticsTest {
 
   public static void main(String[] args) {
     try {
-      Statistics stat = new Statistics(0);
+      Statistics stat = new Statistics();
       stat.addNumber(1.0);
       stat.addNumber(2.0);
       stat.addNumber(3.0);

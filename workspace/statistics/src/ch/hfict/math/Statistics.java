@@ -1,24 +1,25 @@
 package ch.hfict.math;
-public class Statistics{
- private double [] numbers = null;
- private int last = 0;
+//import java.util.ArrayList;
 
- public Statistics(int size){
-   if (size <= 0)
+public class Statistics{
+ private java.util.List<Double> numbers = new java.util.ArrayList<Double>();
+
+ public Statistics(){
+  /* if (size <= 0)
    {
      throw new IllegalArgumentException("Size must be > 0");
-   }
-   numbers = new double [size];
+   } */
  }
  public void addNumber(double n){
-   numbers[last++] = n;
+   numbers.add(n);
  }
  public double getAverage(){
    double tmp = 0;  
-   for (int i = 0; i < last; i++){
-     tmp += numbers[i];
+   
+   for (double n : numbers) {
+     tmp += n;
    }
   //system.out.println(tmp / last);
-   return tmp / last;
+   return tmp / numbers.size();
    }
 }
