@@ -1,4 +1,5 @@
 package ch.hfict.math;
+import java.io.*;
 //import java.util.ArrayList;
 
 public class Statistics{
@@ -22,4 +23,33 @@ public class Statistics{
   //system.out.println(tmp / last);
    return tmp / numbers.size();
    }
+ public boolean isNumber(String s) {
+   try  
+   {  
+     double d = Double.parseDouble(s);  
+   }  
+   catch(NumberFormatException nfe)  
+   {  
+     return false;  
+   }  
+   return true;  
+ }
+ public void read (BufferedReader r)
+ {
+   try {
+     String [] splitedVal = r.readLine().split(" ");
+     
+     for (int i = 0; i < splitedVal.length; i++)
+     {
+       if (isNumber(splitedVal[i])) {
+         numbers.add(Double.parseDouble(splitedVal[i]));
+       }else {
+         System.out.println(splitedVal[i] + " is not a digit!");
+       }
+     } 
+   }
+   catch (IOException e) {
+     e.printStackTrace();
+   }
+ }
 }
