@@ -1,0 +1,30 @@
+Protokoll 11.09.2017
+Cedric Regenass
+
+
+prüfung details
+ModulWoche 1 - 5
+fokus code
+ANT --> ein build.xml schreiben können
+Exceptions --> checked unchecked exeptions (alles unter exception = checked / Runtime exception = unchecked)
+finally wird immer ausgeführt (ob exception oder nicht) brauchbar für delete anweisungen
+collections --> hashcode und equals methoden (array collection braucht das nicht) aber heshmap / set können das ( wie cpp )
+iteratoren --> wissen wies geht
+Ranged based for loop
+i/o streamWriter StreamReader und bufferdwriter bufferedReader
+ --> wissen, wieso wo die unterschiede darin liegen und why es so aufgebaut ist 
+
+
+
+----------------
+I/O
+byte stream's input / output streams
+chars reader's / writer's
+string and char writer / reader's können als memory save ort genutzt werden
+
+zeilen weise lesen / schreiben = buffed writer
+
+anonyme classen implementieren das interface der classe, die man erstellen müsste
+ist +- gleich wie lambda
+
+
