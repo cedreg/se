@@ -4,44 +4,80 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
 import ch.hfict.math.Statistics;
-//todo imports für action handler
-import javafx.application.*;
+
+import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
+import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.StackPane;
+import javafx.scene.layout.FlowPane;
 import javafx.stage.Stage;
 
 public class View extends Application{
-  Statistics stat = new Statistics();
+  
+  private Statistics stat = new Statistics();
   
   public View() {
     BufferedReader r = new BufferedReader(new InputStreamReader(System.in));
     stat.read(r);
+    System.out.println("Con finished boot up gui");
   }
   
   public void start(Stage stage) throws Exception {
 
-    
+    TextField textfld = new TextField("enter values");
+    textfld.setPrefColumnCount(8);
+    TextField resultfld = new TextField();
+    resultfld.setPrefColumnCount(8);
+
     Button calcbtn = new Button("Calculate");
     calcbtn.setOnAction(new EventHandler<ActionEvent>() {
-      // todo: implementatiion for eventhandler ctrl+shift+o
+        @Override
+		public void handle(ActionEvent e) {
+		  //if (e.isConsumed()) {
+		    System.out.println("ayy");
+		    stat.addNumber(textfld.getText());
+		    resultfld.clear();
+		    resultfld.setText(String.valueOf(stat.getAverage()));
+
+		    //textfld.clear();
+		    //e.consume();
+		  //}
+		}
     });
-    TextField textfld = new TextField();
-    textfld.setPrefColumnCount(8);
-    textfld.setText(new Double(stat.getAverage()).toString());
+    Button clearbtn = new Button("Clear");
+    calcbtn.setOnAction(new EventHandler<ActionEvent>() {
+        @Override
+        public void handle(ActionEvent e) {
+          if (e.isConsumed()) {
+            resultfld.clear();
+            textfld.clear();
+            e.consume();
+          }
+        }
+    });
     
-    StackPane root = new StackPane();
-    root.getChildren().add(textfld);
+    // create pane (layout) and set properties
+    FlowPane flowRoot = new FlowPane();
+    flowRoot.setPadding(new Insets(2));
     
-    stage.setScene(new Scene(root, 300, 150));
+    //add nodes (->Widgets) to pane (->layout)
+    flowRoot.getChildren().add(textfld);
+    flowRoot.getChildren().add(calcbtn);
+    flowRoot.getChildren().add(resultfld);
+    flowRoot.getChildren().add(clearbtn);
+    
+    //set pane on the scene (->layout on the widget (or mainwindow))
+    stage.setScene(new Scene(flowRoot, 300, 150));
+    stage.setTitle("HFICT STATISTICS");
     stage.show();
     
   }
   
   public static void main(String[] args) {
-    // TODO Auto-generated method stub
-    new View();
+    //new View();
     launch(args);
   }
 

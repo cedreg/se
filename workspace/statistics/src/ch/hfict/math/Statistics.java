@@ -11,18 +11,33 @@ public class Statistics{
      throw new IllegalArgumentException("Size must be > 0");
    } */
  }
+ 
  public void addNumber(double n){
    numbers.add(n);
  }
+ 
+ public void addNumber(String s) {
+   handleNumberString(s);
+ }
+ 
+ private void handleNumberString(String s) {
+   String [] splited = s.split(" ");
+   for (String sv : splited) {
+     if (isNumber(sv)) {
+       addNumber(Double.parseDouble(sv));
+     }
+   }
+ }
+ 
  public double getAverage(){
    double tmp = 0;  
    
    for (double n : numbers) {
      tmp += n;
    }
-  //system.out.println(tmp / last);
    return tmp / numbers.size();
    }
+ 
  public boolean isNumber(String s) {
    try  
    {  
@@ -34,9 +49,12 @@ public class Statistics{
    }  
    return true;  
  }
- public void read (BufferedReader r)
- {
+ 
+ public void read (BufferedReader r) {
    try {
+     handleNumberString(r.readLine());
+     
+     /*
      String [] splitedVal = r.readLine().split(" ");
      
      for (int i = 0; i < splitedVal.length; i++)
@@ -46,7 +64,10 @@ public class Statistics{
        }else {
          System.out.println(splitedVal[i] + " is not a digit!");
        }
+       System.out.println(Double.parseDouble(splitedVal[i]));
      } 
+     */
+     
    }
    catch (IOException e) {
      e.printStackTrace();
