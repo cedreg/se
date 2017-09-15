@@ -37,7 +37,7 @@ public class View extends Application{
         @Override
 		public void handle(ActionEvent e) {
 		  //if (e.isConsumed()) {
-		    System.out.println("ayy");
+		    System.out.println("TEST TEXTBLT");
 		    stat.addNumber(textfld.getText());
 		    resultfld.clear();
 		    resultfld.setText(String.valueOf(stat.getAverage()));
