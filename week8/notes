@@ -1,0 +1,10 @@
+protokoll 16.10.17
+cedric regenass
+
+erklärung maven
+wenn maven ausgeführt wird, wird nur die ordnerstruktur + die etsprechenden fiels erstellt
+src -> von menschen erstellte dateien
+target -> von programmen generierte files
+
+in home gibts ein .m2 repo für maven. in diesem ordner sind alle packages, die heruntergeladen werden, und gewisse settings
+

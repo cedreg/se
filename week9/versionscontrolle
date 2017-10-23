@@ -1,0 +1,15 @@
+notes GIT
+
+wenn man das repo teilen will braucht man ein bare-repositorie
+
+branche wenn man mal etwas probieren will
+das ist, was git so speziell macht
+
+hooks sind scripts die ausgeführt werden können
+wird gebraucht, sobald man es koppelt mit einem ticket system
+
+git config ist im homeverzeichnis und heisst ~/.gitconfig
+
+
+git cat-file -p 6491 -> zeigt was im verpackten object-file steht
+

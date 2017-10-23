@@ -1,0 +1,4 @@
+protokoll
+cedric Regnass
+
+- mvn archetype:generate -Dfilter=quickstart
