@@ -13,3 +13,16 @@ git config ist im homeverzeichnis und heisst ~/.gitconfig
 
 git cat-file -p 6491 -> zeigt was im verpackten object-file steht
 
+git checkout -b develop = ERSTELLT UND wechselt in den develop branch
+git checkout master = wechselt in master branch
+
+
+git annotate <filename> = Zeigt zeilenbasiert an, wer was commited hat
+
+git revert <branch/commit> = stellt diesen commit wieder her
+
+git log <file> = zeigt alle commits dieses files an
+
+git merge <branch> = merged zwei branches (MUSS zuerste commited sein)
+
+git branch -d <branch> = löscht den branch
