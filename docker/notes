@@ -1,0 +1,23 @@
+Docker nodes
+
+User muss mitglied der Docker gruppe sein
+
+docker run -it ubuntu = startet den docker container mit ubuntu drin
+docker run -d = startet im background
+docker images = zeigt alle Images an
+docker rmi <name> = removed das image
+docker ps = zeigt infos der laufenden container (unter anderm die ID) an
+docker ps -a = zeigt infos der container an
+docker stop <ID> = stopt den container mit der angegebnen ID
+docker start <name> = startet den container mit dem entsprechenden namen
+docker start <name> --restart = restart wenn crash 
+docker attach <name> = verbindet mit dem container mit dem entsprechendem namen
+docker rm <name> = removed den container mit dem namen
+im container ctr-p ctr-q = detach ohne containr zu schliessen
+docker run --rm --net none alpine ip addr = löschen sofort + no network + befehl "ip addr" ausführen
+docker run -d --name web nginx = linux server mit nginx drauf und dem namen "web"
+docker network ls = listet alle container mit der netzwerk id auf
+docker network inspect <id> = zeigt netzwerkdateien an
+
+.yml files sind files, welche wie kleine scripts ausgeführt werden
+

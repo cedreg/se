@@ -1,0 +1,9 @@
+Docker nodes
+
+User muss mitglied der Docker gruppe sein
+
+docker run -it ubuntu = startet den docker container mit ubuntu drin
+docker images = zeigt alle Images an
+docker ps = zeigt infos der laufenden container (unter anderm die ID) an
+docker ps -a = zeigt infos der container an
+docker stop <ID> = stopt den container mit der angegebnen ID
